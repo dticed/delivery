@@ -6,7 +6,7 @@ name: Python application
 defaults:
   run:
     shell: bash
-    working-directory: ../delivery
+    working-directory: ./delivery
 
 on:
   push:
@@ -16,9 +16,7 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.8.5
@@ -29,6 +27,5 @@ jobs:
       run: |
         make install
     - name: Run tests
-      working-directory: ./delivery
       run: |
         make test
