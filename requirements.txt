@@ -1,2 +1,2 @@
 flask
-flas-sqlalchemy
+flask-sqlalchemy
